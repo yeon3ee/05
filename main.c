@@ -4,16 +4,22 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int a;
-	printf("정수 하나를 입력하시오 : ");
-	scanf("%d",&a);
-	
-	if (a<0){
-		a = a*-1; 
-	} 	
-		else{
-		a;
-	}
-	
-	printf("절댓값은 %d 입니다. ",a);
+	char str[100];
+    int count= 0;
+
+
+    printf("input a string : ");
+    
+    gets(str);
+
+    int i = 0;
+    while (str[i] != '\0') {
+        if (str[i] >= '0' && str[i] <= '9') {
+            count++; 
+        }
+        i++;
+    }
+
+    printf("the number of digits is %d .\n", count);
+    return 0;
 }
